@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="progressbar_background">#9DB5B2</color>
+    <color name="progressbar_default">#08415C</color>
+    <color name="item_background">#9DB5B2</color>
+    <color name="progressbar_exceed">#F63528</color>
+    <color name="progressbar_good">#3BC62F</color>
+</resources>

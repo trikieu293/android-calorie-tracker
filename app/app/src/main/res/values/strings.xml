@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Calorie Tracker</string>
+    <string name="title_history">History</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_fooddb">Food</string>
+    <string name="title_activity_login">Login</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="invalid_username">Not a valid email</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="welcomeText">Welcome!</string>
+    <string name="loginHint">Please sign in with your existing account</string>
+    <string name="or">or</string>
+    <string name="action_register">Create new account</string>
+    <string name="prompt_password_repeat">Repeat password</string>
+    <string name="title_activity_register">Register</string>
+    <string name="invalid_repeated_password">The passwords do not match.</string>
+    <string name="title_tab_wheight">Weight</string>
+    <string name="title_tab_personal">Personal data</string>
+    <string name="add_new_wheight">Record new weight</string>
+    <string name="button_plus" translatable="false">+</string>
+    <string name="button_minus" translatable="false">-</string>
+    <string name="button_confirm">Confirm</string>
+    <string name="settings_firstname">Firstname</string>
+    <string name="settings_age">Age</string>
+    <string name="settings_height">Height</string>
+    <string name="settings_lastname">Surname</string>
+    <string name="unit_weight" translatable="false">kg</string>
+    <string name="progressBar_percentage">200/2000</string>
+    <string name="current_day">TODO - input from localday</string>
+    <string name="item_name_hint">Item name</string>
+    <string name="item_calorie_hint">kcal / part</string>
+    <string name="item_amount_hint">Amount</string>
+    <string name="add_button_text">Add</string>
+    <string name="item_name">Added_item</string>
+    <string name="item_amount">1</string>
+    <string name="item_sum_calorie">0</string>
+    <string name="sum_chose_day">0</string>
+    <string name="result_chose_day">UNDEFINED</string>
+    <string name="action_profile">Profile</string>
+    <string name="db_item_calorie">0</string>
+    <string name="action_logout">Logout</string>
+    <string name="recommend_name">Item_name</string>
+    <string name="recommend_calorie">0</string>
+    <string name="hint_ean">EAN (optional)</string>
+    <string name="unit_cal" translatable="false">kcal</string>
+    <string name="text_sumcal">Total kcal:</string>
+    <string name="text_amount">Amount:</string>
+    <string name="app_widget_description">Shows latest calorie information.</string>
+    <string name="error_cam_access_denied">System denied access to camera</string>
+    <string name="text_bc_item_found">Item found:</string>
+    <string name="text_bc_item_new">Item not found. Create a new one:</string>
+    <string name="error_bc_amount">Please enter a nuber > 0</string>
+    <string name="error_bc_name">Please enter a name</string>
+    <string name="shortcut_barcode_long">Scan Barcode</string>
+    <string name="shortcut_barcode_short">Scan</string>
+    <string name="welcome_subtext">Please enter your personal data to get started!</string>
+    <string name="settings_weight">Your current weight</string>
+    <string name="button_start">Start</string>
+    <string name="invalid_string">Please enter a valid string</string>
+    <string name="notification_title">Reminder</string>
+    <string name="notification_text">Please do not forget to enter your breakfast!</string>
+    <string name="notification_channel_name">Calorie Tracker Reminder</string>
+    <string name="notification_channel_decription">Reminds you of entering consumed food</string>
+    <string name="text_result">Result:</string>
+    <string name="hint_fooddb_name">Name to add and search</string>
+    <string name="text_too_much">TOO MUCH</string>
+    <string name="text_good">GOOD</string>
+    <string name="text_too_low">TOO LOW</string>
+    <string name="toast_undo">Undo</string>
+    <string name="toast_item_removed">Item was removed from the list.</string>
+    <string name="text_undefined_item">Undefined Item</string>
+</resources>

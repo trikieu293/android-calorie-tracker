@@ -1,0 +1,5 @@
+<resources>
+
+    <style name="Widget.CalorieTracker.AppWidget.Container" parent="android:Widget"></style>
+
+</resources>

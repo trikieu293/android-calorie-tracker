@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fooddb.FooddbFragment"
+    android:id="@+id/database_layout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/data_add_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/db_add_button"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/db_add_name"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="0.65"
+                android:autofillHints="Name"
+                android:hint="@string/hint_fooddb_name"
+                android:inputType="text"
+                android:textColorHint="#8D6E63" />
+
+            <EditText
+                android:id="@+id/db_add_calorie"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.35"
+                android:autofillHints="Calorie"
+                android:hint="@string/item_calorie_hint"
+                android:inputType="text"
+                android:textColorHint="#8D6E63" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/db_add_ean"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:autofillHints="Calorie"
+            android:hint="@string/hint_ean"
+            android:inputType="text"
+            android:textColorHint="#8D6E63" />
+
+        <Button
+            android:id="@+id/db_add_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_button_text"
+            app:layout_constraintBottom_toTopOf="@+id/list_of_db_layout"
+            app:layout_constraintTop_toBottomOf="@+id/data_add_layout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_of_db_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/db_add_button" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="compose"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_document_scanner_24"
+        android:shortcutShortLabel="@string/shortcut_barcode_short"
+        android:shortcutLongLabel="@string/shortcut_barcode_long"
+        android:shortcutDisabledMessage="@string/shortcut_barcode_short">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="de.unipassau.calorietracker"
+            android:targetClass="de.unipassau.calorietracker.BarcodeScannerActivity" />
+        <categories android:name="android.shortcut.conversation" />
+        <capability-binding android:key="actions.intent.CREATE_MESSAGE" />
+    </shortcut>
+    <!-- Specify more shortcuts here. -->
+</shortcuts>

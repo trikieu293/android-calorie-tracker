@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="wrap_content"
+            android:layout_height="192dp"
+
+            app:cpb_background_progressbar_color="@color/progressbar_background"
+            app:cpb_background_progressbar_width="25dp"
+            app:cpb_progress="@integer/current_calorie"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progress_max="@integer/max_calorie"
+            app:cpb_progressbar_color="@color/progressbar_default"
+            app:cpb_progressbar_width="25dp"
+            app:cpb_round_border="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/progressBar_percentage"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/progress_circular"
+            app:layout_constraintEnd_toEndOf="@+id/progress_circular"
+            app:layout_constraintStart_toStartOf="@+id/progress_circular"
+            app:layout_constraintTop_toTopOf="@+id/progress_circular" />
+
+        <TextView
+            android:id="@+id/today_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/current_day"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progress_circular" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/progress_layout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/item_add_edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/add_button"
+            app:layout_constraintTop_toBottomOf="@id/today_text">
+
+            <AutoCompleteTextView
+                android:id="@+id/item_name_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="5"
+                android:autofillHints="@string/item_name_hint"
+                android:dropDownHeight="150dp"
+                android:hint="@string/item_name_hint"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/item_calorie_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:autofillHints="@string/item_calorie_hint"
+                android:hint="@string/item_calorie_hint"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/item_amount_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:autofillHints="@string/item_amount_hint"
+                android:hint="@string/item_amount_hint"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/add_button"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                app:icon="@drawable/ic_baseline_playlist_add_24"
+                app:layout_constraintBottom_toTopOf="@+id/list_layout"
+                app:layout_constraintTop_toBottomOf="@+id/item_add_edit_layout" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/home_layout"
+            app:layout_constraintTop_toBottomOf="@id/add_button" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

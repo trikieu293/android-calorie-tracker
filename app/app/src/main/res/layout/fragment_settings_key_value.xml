@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="editMode" type="boolean"/>
+        <variable name="currentValue" type="String"/>
+        <variable name="label" type="String"/>
+        <variable name="inputType" type="int"/>
+        <import type="android.view.View" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".SettingsKeyValueFragment">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/propertyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="0"
+                android:text="@{label}" />
+
+            <TextView
+                android:id="@+id/propertyValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@{currentValue}"
+                android:textStyle="bold"
+                android:visibility="@{!editMode ? View.VISIBLE: View.GONE}"/>
+
+            <EditText
+                android:id="@+id/propertyEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:ems="10"
+                android:inputType="@{inputType}"
+                android:text="@{currentValue}"
+                android:visibility="@{editMode ? View.VISIBLE: View.GONE}"/>
+
+            <Button
+                android:id="@+id/editButton"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:paddingVertical="0dp"
+                app:icon="@drawable/ic_baseline_edit_24"
+                android:visibility="@{!editMode ? View.VISIBLE: View.GONE}"/>
+
+            <Button
+                android:id="@+id/confirmButton"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@android:string/ok"
+                android:visibility="@{editMode ? View.VISIBLE: View.GONE}" />
+
+        </LinearLayout>
+    </FrameLayout>
+</layout>
